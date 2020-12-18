@@ -6,6 +6,7 @@
   --main-title-color: #212121;
   --main-text-color: #757575;
   --grey4: #afb1b8;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -154,6 +155,7 @@ img {
   text-decoration: none;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .nav-list-link:hover,
@@ -202,6 +204,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms var(--transition-timing-function);
 }
 .nav-adress .link:hover,
 .nav-adress .link:focus {
@@ -433,6 +436,8 @@ button:focus {
   border-radius: 50%;
   background: #ffffff;
   color: #afb1b8;
+  transition: background-color 250ms var(--transition-timing-function),
+    color 250ms var(--transition-timing-function);
 }
 
 .social-list-link:hover {
@@ -463,7 +468,7 @@ button:focus {
 }
 /*======regular-clients======*/
 
-.regular-clients-title {
+.clients-title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -473,7 +478,7 @@ button:focus {
   color: #212121;
 }
 
-.regular-clients-link {
+.clients-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,23 +486,25 @@ button:focus {
   height: 90px;
   background: #ffffff;
   border: 1px solid #afb1b8;
-  box-sizing: border-box;
+
   border-radius: 4px;
   fill: var(--grey4);
+
+  transition: 200ms var(--transition-timing-function),
+    border-color 200ms var(--transition-timing-function);
 }
-.regular-clients-link:hover,
-.regular-clients-link:focus {
+.clients-list-link:hover,
+.clients-list-link:focus {
   border-color: #2196f3;
   fill: #2196f3;
 }
 
-.regular-clients-list {
+.clients-list {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 94px;
 }
 
-.regular-clients-icon {
+.clients-icon {
   color: rgba(175, 177, 184, 1);
   display: flex;
   justify-content: center;
@@ -505,7 +512,7 @@ button:focus {
   height: 49px;
 }
 
-.regular-clients-item {
+.clients-list-item {
   margin-right: 30px;
 }
 
@@ -533,6 +540,9 @@ button:focus {
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
+  transition: 250ms var(--transition-timing-function),
+    background-color 250ms var(--transition-timing-function),
+    box-shadow 250ms var(--transition-timing-function);
 }
 
 .button-list-item:not(:last-child) {
@@ -685,6 +695,7 @@ a {
 .footer-list {
   display: flex;
   justify-content: space-between;
+  transition: color 250ms var(--transition-timing-function);
 }
 .footer-item:not(:last-child) {
   margin-right: 10px;
@@ -701,10 +712,13 @@ a {
   cursor: pointer;
   fill: #ffffff;
   border-radius: 50px;
+  transition: background-color 250ms var(--transition-timing-function),
+    color 250ms var(--transition-timing-function);
 }
 
 .icon {
   fill: #ffffff;
+  transition: background-color 250ms var(--transition-timing-function);
 }
 .footer-link:hover {
   background-color: var(--accent-color);
@@ -747,10 +761,14 @@ a {
   background-color: #fff;
 
   transition: transform 500ms linear 500ms;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .close-btn {
   position: absolute;
+  padding: 6px;
   top: 8px;
   right: 8px;
   width: 30px;
